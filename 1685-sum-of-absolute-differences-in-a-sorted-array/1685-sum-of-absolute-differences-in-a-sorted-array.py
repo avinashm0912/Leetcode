@@ -9,9 +9,9 @@ class Solution(object):
         pre_sum = 0
         res = [0]*n
         for i in range(n):
-            total -= nums[i]
+            total = total - nums[i]
             left = i*nums[i] - pre_sum
             right = total - (n-i-1)*nums[i]
-            pre_sum += nums[i]
+            pre_sum = pre_sum + nums[i]
             res[i] = left + right
         return res
